@@ -12,6 +12,10 @@ a {
   color: #282c34;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

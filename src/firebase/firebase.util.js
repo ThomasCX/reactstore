@@ -1,26 +1,50 @@
 import firebase from 'firebase/app';
-
 import 'firebase/firestore';
 import 'firebase/auth';
 
 const config = {
-
-    apiKey: "AIzaSyDunR62C4CAjlryhETMdco5ej5qsI7df9g",
-    authDomain: "reactstore-deb92.firebaseapp.com",
-    projectId: "reactstore-deb92",
-    storageBucket: "reactstore-deb92.appspot.com",
-    messagingSenderId: "773721724437",
-    appId: "1:773721724437:web:8c7e8538682715d91ee01c",
-    measurementId: "G-NZ8YBLHRRK"
+    apiKey: "AIzaSyA6w5l4Jkmdv9EJ-ykGMyuAkOuri3WJzbw",
+    authDomain: "reactstore-836e1.firebaseapp.com",
+    // databaseUrl: "https://reacstore-836e1.firebaseio.com",
+    projectId: "reactstore-836e1",
+    storageBucket: "reactstore-836e1.appspot.com",
+    messagingSenderId: "17091716918",
+    appId: "1:17091716918:web:6173b71cf0aca62881f597",
+    measurementId: "G-60WYT46HBV"
 };
 
-firebase.initializeApp(config)
+firebase.initializeApp(config);
+
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+    if (!userAuth) return;
+
+    const userRef = firestore.doc(`users/${userAuth.uid}`);
+
+    const snapShot = await userRef.get();
+
+    if (!snapShot.exists) {
+        const { displayName, email } = userAuth;
+        const createdAt = new Date();
+        try {
+            await userRef.set({
+                displayName,
+                email,
+                createdAt,
+                ...additionalData
+            });
+        } catch (error) {
+            console.log('error creating user', error.message);
+        }
+    }
+
+    return userRef;
+};
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 const provider = new firebase.auth.GoogleAuthProvider();
-provider.setCustomParameters({prompt: 'select_account'});
+provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;

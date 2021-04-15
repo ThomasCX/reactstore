@@ -9,7 +9,7 @@
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: 'serif';
+  font-family: 'Open Sans Condensed';
   font-weight: bolder;
   border: none;
   cursor: pointer;
@@ -23,11 +23,11 @@
   }
 
   &.google-sign-in {
-    background-color: crimson;
+    background-color: #4285f4;
     color: white;
 
     &:hover {
-      background-color: darkred;
+      background-color: #357ae8;
       border: none;
     }
   }
@@ -42,6 +42,5 @@
       color: white;
       border: none;
     }
-
   }
 }

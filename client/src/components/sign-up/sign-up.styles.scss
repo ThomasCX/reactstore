@@ -1,0 +1,12 @@
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  border: black;
+  border-style: solid;
+  padding: 5px;
+
+  .title {
+    margin: 10px 0;
+  }
+}

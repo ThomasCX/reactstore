@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e7c3c41e-2ce8-4a8e-a958-b0f33b83165b" name="Default Changelist" comment="checkout page was pointing to header">
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/contact-form/contact-form.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/form/contact-form.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/contact-form/contact-form.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/form/contact-form.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/footer/footer.styles.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/footer/footer.styles.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/contact-us/contact-us.componet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/contact-us/contact-us.componet.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="1rSIT0sLamp3EtoyBseWr6LWPjt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/reactstore-ced57e6d149b7cc2b24d366440d77222c1d9058c/reactstore-ced57e6d149b7cc2b24d366440d77222c1d9058c" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Users\nsbra\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\211.6693.108\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\nsbra\OneDrive\Desktop\Programmes\reactstore\reactstore\client\public" />
+      <recent name="C:\Users\nsbra\OneDrive\Desktop\Programmes\reactstore\reactstore\client\src\components\spinner" />
+      <recent name="C:\Users\nsbra\OneDrive\Desktop\Programmes\reactstore\reactstore\client\src\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\nsbra\OneDrive\Desktop\Programmes\reactstore\reactstore\client\src\components\form" />
+      <recent name="C:\Users\nsbra\OneDrive\Desktop\Programmes\reactstore\reactstore\client" />
+      <recent name="C:\Users\nsbra\OneDrive\Desktop\Programmes\reactstore\reactstore\client\src" />
+      <recent name="C:\Users\nsbra\OneDrive\Desktop\Programmes\reactstore\reactstore\client\public\js" />
+      <recent name="C:\Users\nsbra\OneDrive\Desktop\Programmes\reactstore\reactstore\client\src\components\footer" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" singleton="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7c3c41e-2ce8-4a8e-a958-b0f33b83165b" name="Default Changelist" comment="" />
+      <created>1618963071588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618963071588</updated>
+      <workItem from="1618963074673" duration="483000" />
+      <workItem from="1618964074456" duration="8000" />
+      <workItem from="1618964111789" duration="1055000" />
+      <workItem from="1618965642062" duration="1488000" />
+      <workItem from="1618967798295" duration="54709000" />
+      <workItem from="1619102991480" duration="530000" />
+    </task>
+    <task id="LOCAL-00001" summary="reinitialized">
+      <created>1618964943088</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618964943088</updated>
+    </task>
+    <task id="LOCAL-00002" summary="npm i -f (force installed any missing dependencies)">
+      <created>1618969202210</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1618969202210</updated>
+    </task>
+    <task id="LOCAL-00003" summary="npm i -f (force installed any missing dependencies)">
+      <created>1618969219031</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1618969219031</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add a footer too the page, error handling">
+      <created>1619014180991</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1619014180991</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Create an about page">
+      <created>1619020726749</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1619020726749</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add push notifications to the web app">
+      <created>1619027195167</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1619027195167</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add push notifications to the web app">
+      <created>1619033976710</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1619033976710</updated>
+    </task>
+    <task id="LOCAL-00008" summary="checkout page was pointing to header">
+      <created>1619047428477</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1619047428477</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="reinitialized" />
+    <MESSAGE value="npm i -f (force installed any missing dependencies)" />
+    <MESSAGE value="add a footer too the page, error handling" />
+    <MESSAGE value="Create an about page" />
+    <MESSAGE value="add push notifications to the web app" />
+    <MESSAGE value="checkout page was pointing to header" />
+    <option name="LAST_COMMIT_MESSAGE" value="checkout page was pointing to header" />
+  </component>
+</project>

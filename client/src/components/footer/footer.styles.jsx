@@ -45,7 +45,7 @@ export const OptionsContainer = styled.div`
   }
 `;
 
-export const Icon = styled.div`
+export const Icon = styled(Link)`
   padding: 5px;
   @media screen and (max-width: 800px){
     align-items: center;

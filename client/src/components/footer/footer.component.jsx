@@ -57,9 +57,11 @@ const Footer = () => {
                             <ul className="list-unstyled nav-links social nav-right text-lg-right">
                                 <li><Icon to={{pathname: "https://github.com/natebrate"}}
                                           target="_blank"><FaGithub/></Icon></li>
-                                <li><Icon to={{pathname: "https://github.com/natebrate"}} target="_blank"><FaInstagram/></Icon>
+                                <li><Icon to={{pathname: "https://github.com/natebrate"}}
+                                                target="_blank"><FaInstagram/></Icon>
                                 </li>
-                                <li><Icon to={{pathname: "https://github.com/natebrate"}} target="_blank"><FaFacebook/></Icon>
+                                <li><Icon to={{pathname: "https://github.com/natebrate"}}
+                                                target="_blank"><FaFacebook/></Icon>
                                 </li>
                                 <li><Icon to={{pathname: "https://github.com/natebrate"}}
                                           target="_blank"><FaTwitter/></Icon></li>

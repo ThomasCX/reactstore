@@ -3,6 +3,9 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import {connect} from 'react-redux';
 
+import { positions, Provider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
 import Header from "./components/header/header.component"
 import Footer from './components/footer/footer.component';
 import Spinner from './components/spinner/spinner.components'
@@ -22,6 +25,11 @@ const SignInAndSignUpPage = lazy(() => import('./pages/signin-and-signup/signin-
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 const ContactPage  = lazy(() => import('./pages/contact-us/contact-us.componet'));
 const AboutPage = lazy(() => import('./pages/about-us/about.component'));
+const options = {
+    timeout: 3500,
+    position: positions.TOP_CENTER
+};
+
 
 //user useEffects where there are life cycle effects in the app
 const App = ({currentUser, checkUserSession }) => {
@@ -29,9 +37,10 @@ const App = ({currentUser, checkUserSession }) => {
         checkUserSession()
     }, [checkUserSession])
 
-
     return (
+
         <div>
+            <Provider template={AlertTemplate} {...options}>
             <GlobalStyle/>
             <Header/>
             <div>
@@ -56,6 +65,7 @@ const App = ({currentUser, checkUserSession }) => {
                 </Switch>
             </div>
             <Footer/>
+            </Provider>
         </div>
     );
 }

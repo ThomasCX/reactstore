@@ -1,11 +1,12 @@
 import React from 'react';
+import { useAlert } from "react-alert";
 import emailjs from 'emailjs-com';
-import { Button } from 'react-bootstrap';
 
 import {contact, format} from "./contact-form.styles";
 import CustomButton from "../custom-button/custom-button.component";
 
 const ContactFormComponent = () => {
+    const alert = useAlert();
 
         function sendEmail(e) {
             e.preventDefault();
@@ -20,8 +21,9 @@ const ContactFormComponent = () => {
         }
 
 
-        function handleSubmit() {
-            alert("Email was sent, Thank you");
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert.success("Email was sent, Thank you");
             //grab the information on submit has be clicked
         }
 
@@ -39,8 +41,7 @@ const ContactFormComponent = () => {
                         <input type="text" className="form-control" placeholder="Subject" name="subject"/>
                     </div>
                     <div className="col-8 form-group pt-2 mx-auto">
-                        <input type="tel" className="form-control" placeholder="Phone Number" name="contact"
-                               pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+                        <input type="tel" className="form-control" placeholder="Phone Number" name="contact"/>
                         <format>Format: 123-456-7890</format>
                     </div>
                     <div className="col-8 form-group pt-2 mx-auto">
@@ -48,8 +49,8 @@ const ContactFormComponent = () => {
                     </textarea>
                     </div>
                     <div className="col-8 pt-3 mx-auto">
-                        <CustomButton type="submit"
-                                value="Send Message">Submit
+                        <CustomButton id="email" type="submit"
+                                value="Send Message" onClick={handleSubmit}>Submit
                         </CustomButton>
                     </div>
                 </div>

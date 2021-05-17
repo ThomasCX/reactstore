@@ -63,7 +63,7 @@ const Footer = () => {
                                 <li><Icon to={{pathname: "https://github.com/natebrate"}}
                                                 target="_blank"><FaFacebook/></Icon>
                                 </li>
-                                <li><Icon to={{pathname: "https://github.com/natebrate"}}
+                                <li><Icon to={{pathname: "https://github.com/Seaside-Development"}}
                                           target="_blank"><FaTwitter/></Icon></li>
                             </ul>
                         </div>

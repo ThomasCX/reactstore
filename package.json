@@ -21,6 +21,7 @@
     "express": "^4.16.4",
     "express-sslify": "^1.2.0",
     "react-scripts": "^4.0.3",
+    "redux-persist": "^6.0.0",
     "stripe": "6.28.0"
   },
   "devDependencies": {

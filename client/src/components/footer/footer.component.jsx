@@ -14,7 +14,8 @@ import FormInput from "../form/form-input.component";
 
 const Footer = () => {
 
-    const PopupExample = (event) => {
+    const PopupExample = (e) => {
+        e.preventDefault();
         return (
             <Popup trigger={<button> Trigger</button>} position="right center">
                 <div>Thank you for Subscribing</div>

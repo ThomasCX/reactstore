@@ -1,14 +1,16 @@
 import React from 'react';
 import { FaFacebook, FaTwitter, FaGithub, FaInstagram, FaArrowLeft} from "react-icons/fa";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './footer.styles.scss';
 import Popup from 'reactjs-popup';
 
 import {
     OptionLink,
     OptionLink2,
     Icon,
-    Container
+    Container,
+    Button,
+    Form,
+    List
 } from './footer.styles'
 import FormInput from "../form/form-input.component";
 
@@ -29,43 +31,43 @@ const Footer = () => {
                     <div className="row align-items-center">
                         <div className="col-lg-3">
 
-                            <form onSubmit={PopupExample} className="subscribe mb-4 mb-lg-0">
+                            <Form onSubmit={PopupExample} className="subscribe mb-4 mb-lg-0">
                                 <div className="form-group">
                                     <FormInput
                                         name='email'
                                         type='email'
                                         className="form-control"
                                         placeholder="Subscribe"/>
-                                    <button type='submit'>
+                                    <Button type='submit'>
                                         <FaArrowLeft/>
-                                    </button>
+                                    </Button>
                                 </div>
-                            </form>
+                            </Form>
                         </div>
                         <div className="col-lg-6 text-lg-center">
                             <ul className="list-unstyled nav-links nav-left mb-4 mb-lg-0">
-                                <li><OptionLink to='/'>HOME</OptionLink></li>
+                                <List><OptionLink to='/'>HOME</OptionLink></List>
                                 &nbsp;&nbsp;
-                                <li><OptionLink to='/Shop'>SHOP</OptionLink></li>
+                                <List><OptionLink to='/Shop'>SHOP</OptionLink></List>
                                 &nbsp;&nbsp;
-                                <li><OptionLink to='/contact'>CONTACT</OptionLink></li>
+                                <List><OptionLink to='/contact'>CONTACT</OptionLink></List>
                                 &nbsp;&nbsp;
-                                <li><OptionLink to='/about'>ABOUT US</OptionLink></li>
+                                <List><OptionLink to='/about'>ABOUT US</OptionLink></List>
                                 &nbsp;&nbsp;
                             </ul>
                         </div>
                         <div className="col-lg-3">
                             <ul className="list-unstyled nav-links social nav-right text-lg-right">
-                                <li><Icon to={{pathname: "https://github.com/natebrate"}}
-                                          target="_blank"><FaGithub/></Icon></li>
-                                <li><Icon to={{pathname: "https://github.com/natebrate"}}
+                                <List><Icon to={{pathname: "https://github.com/natebrate"}}
+                                          target="_blank"><FaGithub/></Icon></List>
+                                <List><Icon to={{pathname: "https://github.com/natebrate"}}
                                                 target="_blank"><FaInstagram/></Icon>
-                                </li>
-                                <li><Icon to={{pathname: "https://github.com/natebrate"}}
+                                </List>
+                                <List><Icon to={{pathname: "https://github.com/natebrate"}}
                                                 target="_blank"><FaFacebook/></Icon>
-                                </li>
-                                <li><Icon to={{pathname: "https://github.com/Seaside-Development"}}
-                                          target="_blank"><FaTwitter/></Icon></li>
+                                </List>
+                                <List><Icon to={{pathname: "https://github.com/Seaside-Development"}}
+                                          target="_blank"><FaTwitter/></Icon></List>
                             </ul>
                         </div>
                     </div>
@@ -79,13 +81,13 @@ const Footer = () => {
                     </div>
                     <div className="col-lg-4 order-2 order-lg-1 mb-3 mb-lg-0">
                         <ul className="list-unstyled nav-links m-0 nav-left">
-                            <li><OptionLink to='/'>Terms</OptionLink></li>
+                            <List><OptionLink to='/'>Terms</OptionLink></List>
                             &nbsp;&nbsp;
-                            <li><OptionLink to='/about'>About</OptionLink></li>
+                            <List><OptionLink to='/about'>About</OptionLink></List>
                             &nbsp;&nbsp;
-                            <li><OptionLink to='/'>Privacy</OptionLink></li>
+                            <List><OptionLink to='/'>Privacy</OptionLink></List>
                             &nbsp;&nbsp;
-                            <li><OptionLink to='/contact'>Contact</OptionLink></li>
+                            <List><OptionLink to='/contact'>Contact</OptionLink></List>
                             &nbsp;&nbsp;
                         </ul>
                     </div>

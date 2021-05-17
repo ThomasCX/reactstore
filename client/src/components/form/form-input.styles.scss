@@ -7,6 +7,7 @@ shrinkLabel {
 .group {
   position: relative;
   margin: 45px 0;
+}
 
   .form-input {
     background: white none;
@@ -33,9 +34,6 @@ shrinkLabel {
     }
   }
 
-  input[type='password'] {
-    letter-spacing: 0.3em;
-  }
 
   .form-input-label {
     color: grey;
@@ -53,4 +51,3 @@ shrinkLabel {
         color: black;
     }
   }
-}

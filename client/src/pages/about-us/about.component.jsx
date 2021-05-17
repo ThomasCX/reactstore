@@ -11,9 +11,9 @@ const AboutPage = () => (
     <Container>
         <Title>About Us</Title>
         <AboutContainer>
-            We are Barbadian company catering in offering the best designs possible.
-            An exclusive taste and wide selection of styles, you cannot go wrong with us
-            Mens and Women's wear/accessories crafted for you in numerous colours and refined materials.
+            We are a Barbadian company catering for offering the best designs possible.
+            With an exclusive taste and a wide selection of styles, you cannot go wrong with us.
+            Men’s and Women's wear/accessories crafted for you in numerous colours and refined materials.
         </AboutContainer>
         <HR></HR>
 

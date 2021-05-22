@@ -36,6 +36,17 @@ app.get('/service-worker.js', (req, res) =>
     res.sendFile(path.resolve(__dirname, '..', 'build', 'service-worker.js'));
 });
 
+// app.get('OneSignalSDKUpdaterWorker.js', (req, res) =>
+//     {
+//         res.sendFile(path.resolve(__dirname, '..', 'build', "OneSignalSDKUpdaterWorker.js"));
+//     }
+// );
+// app.get('OneSignalSDKWorker.js', (req, res) =>
+//     {
+//         res.sendFile(path.resolve(__dirname, '..', 'build', "OneSignalSDKWorker.js"));
+//     }
+// );
+
 //payment backend for the stripe payment system
 app.post('/payment', (req, res) => {
     const body = {
@@ -44,11 +55,12 @@ app.post('/payment', (req, res) => {
         currency: 'usd'
     };
 
+    let error;
     stripe.charges.create(body, (stripeErr, stripeRes) => {
         if (stripeErr) {
-            res.status(500).send({ error: stripeErr });
+            res.status(500).send({error: stripeErr});
         } else {
-            res.status(200).send({ success: stripeRes });
+            res.status(200).send({success: stripeRes});
         }
-    });
-});
+    }).then(r => error);
+} );

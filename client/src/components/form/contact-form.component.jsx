@@ -20,10 +20,10 @@ const ContactFormComponent = () => {
             e.target.reset()
         }
 
-
         function handleSubmit(e) {
             e.preventDefault();
             alert.success("Email was sent, Thank you");
+            window.Android.androidAlert(document.getElementById("name").value, document.getElementById("email").value);
             //grab the information on submit has be clicked
         }
 

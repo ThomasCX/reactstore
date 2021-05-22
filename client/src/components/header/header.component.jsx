@@ -7,22 +7,27 @@ import {ReactComponent as Logo} from '../../assets/crown.svg'
 
 // Cart related components
 import CartIcon from '../cart-icon/cart-icon.component';
-import CartDropdown from '../cart-dropdown/cart-dropdown.component'
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
-
 import { signOutStart } from '../../redux/user/user.actions'
 
 import {
     OptionLink, HeaderContainer,
-    LogoContainer, OptionsContainer,
+    LogoContainer, OptionsContainer, ToggleButton,
 }
-from './header.styles'
+    from './header.styles'
+import HamburgerIcon from "./HamburgerIcon";
 
 //destructor the user and hidden cart dropdown
-const Header = ({currentUser, hidden, signOutStart}) => (
+const Header = ({handleDrawerToggleClick, signOutStart, hidden, currentUser}) =>
+{
 
-    <HeaderContainer>
+    return (
+        <HeaderContainer>
+        <ToggleButton>
+            <HamburgerIcon click={(handleDrawerToggleClick)}/>
+        </ToggleButton>
         <LogoContainer to='/'>
             <Logo className='logo' />
         </LogoContainer>
@@ -36,6 +41,9 @@ const Header = ({currentUser, hidden, signOutStart}) => (
             <OptionLink to='/about'>
                 ABOUT
             </OptionLink>
+            <OptionLink to='/checkout'>
+                CHECKOUT
+            </OptionLink>
             { currentUser ? (
                 // if statement that checks whether user is sign in or out
                 // check the user is signed out
@@ -48,20 +56,22 @@ const Header = ({currentUser, hidden, signOutStart}) => (
                     </OptionLink>
                 )
             }
-            <CartIcon/>
+            <CartIcon to='/checkout'/>
         </OptionsContainer>
         {/*hidden is to ensure the cart dropdown is hidden initially*/}
-        {hidden ? null : <CartDropdown />}
+            {hidden ? null : <CartDropdown />}
     </HeaderContainer>
-)
+    )
+}
+
 const mapStateToProps = createStructuredSelector ({
     currentUser: selectCurrentUser,
-    hidden: selectCartHidden
+    hidden: selectCartHidden,
 })
 
 //call to start the following function when an action is fired
 const mapDispatchToProps = dispatch => ({
-    signOutStart: () => dispatch(signOutStart())
+    signOutStart: () => dispatch(signOutStart()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -1,6 +1,15 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+export const ToggleButton = styled.div`
+  @media (max-width: 768px) {
+      margin-right: 15px;
+  }
+  @media (min-width: 769px) {
+    display: none;
+  }
+`
+
 export const HeaderContainer = styled.div`
   height: 70px;
   width: 100%;
@@ -25,6 +34,9 @@ export const LogoContainer = styled(Link)`
     width: 50px;
     padding: 0;
   }
+  @media screen and (min-width: 769px){
+    margin-left: 5px;
+  }
 `;
 
 export const OptionsContainer = styled.div`
@@ -33,6 +45,9 @@ export const OptionsContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  @media (max-width: 768px) {
+      display: none;
+  }
 `;
 
 export const OptionLink = styled(Link)`

@@ -1,0 +1,7 @@
+const BurgerActionTypes =
+{
+    SHOW_MOBILE_NAVIGATION_MENU:"SHOW_MOBILE_NAVIGATION_MENU",
+    HIDE_MOBILE_NAVIGATION_MENU: "HIDE_MOBILE_NAVIGATION_MENU",
+}
+
+export default BurgerActionTypes;

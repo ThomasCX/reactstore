@@ -1,4 +1,4 @@
-import React, {lazy, useEffect, Suspense} from "react";
+import React, {lazy, useEffect, Suspense, useState} from "react";
 import {Switch, Route, Redirect} from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
 import {connect} from 'react-redux';
@@ -10,6 +10,8 @@ import Header from "./components/header/header.component"
 import Footer from './components/footer/footer.component';
 import Spinner from './components/spinner/spinner.components'
 import ErrorBoundary from './components/error-boundary/error.boundary.component'
+import SideDrawer from './components/header/SideDrawer';
+import BackDropComponent from './components/header/BackDrop.component'
 
 //object export
 import {GlobalStyle} from './global.styles';
@@ -17,6 +19,7 @@ import { checkUserSession } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 //page exports
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
@@ -37,13 +40,29 @@ const App = ({currentUser, checkUserSession }) => {
         checkUserSession()
     }, [checkUserSession])
 
-    return (
+    const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
 
-        <div>
+    const handleDrawerToggleClick = () => {
+        setSideDrawerOpen((prevDrawerState) => !prevDrawerState);
+    };
+
+    const handleBackDropClick = () => {
+        setSideDrawerOpen(false)
+    }
+    let backdrop;
+
+    if (sideDrawerOpen) {
+        backdrop = <BackDropComponent click={handleBackDropClick} />
+    }
+
+    return (
+        <div style={{ height: "100%" }}>
             <Provider template={AlertTemplate} {...options}>
             <GlobalStyle/>
-            <Header/>
-            <div>
+                <Header handleDrawerToggleClick={handleDrawerToggleClick}/>
+                <SideDrawer show={sideDrawerOpen}/>
+                {backdrop}
+                <main style={{ marginTop: "56px"}}>
                 <Switch>
                     <ErrorBoundary>
                         <Suspense fallback={<Spinner/>}>
@@ -63,7 +82,7 @@ const App = ({currentUser, checkUserSession }) => {
                         </Suspense>
                     </ErrorBoundary>
                 </Switch>
-            </div>
+                </main>
             <Footer/>
             </Provider>
         </div>

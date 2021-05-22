@@ -3,10 +3,9 @@ import { connect } from 'react-redux';
 
 import FormInput from "../form/form-input.component";
 
-import './sign-in.styles.scss';
-
 import CustomButton from "../custom-button/custom-button.component";
 import { googleSignInStart, emailSignInStart } from "../../redux/user/user.actions";
+import {ButtonsBarContainer, SignInForm, Title} from "./sign-in.styles";
 
 //pass in the properties that check the user account in user actions
 const SignIn = ({emailSignInStart, googleSignInStart}) => {
@@ -30,8 +29,8 @@ const SignIn = ({emailSignInStart, googleSignInStart}) => {
     }
 
         return (
-            <div className='sign-in'>
-                <h2> have an account </h2>
+            <SignInForm>
+                <Title> have an account </Title>
                 <span>Sign in with your email and password</span>
 
                 <form onSubmit={handleSubmit}>
@@ -43,21 +42,23 @@ const SignIn = ({emailSignInStart, googleSignInStart}) => {
 
                     <FormInput name='password' type='password'
                            value={password}
+                               autocomplete="current-password"
                            handleChange={handleChange}
                                label="password"
                            required/>
 
-                       <div className='buttons'>
+                       <ButtonsBarContainer>
                            <CustomButton type='submit'>Sign In</CustomButton>
-                           {/*Call to google start function to execute
-                           google popup*/}
-                           <CustomButton type="button" onClick={googleSignInStart}
-                                         isGoogleSignIn>
+                           <CustomButton
+                                type="button"
+                                onClick={googleSignInStart}
+                                isGoogleSignIn
+                             >
                                Google Sign in
                            </CustomButton>
-                       </div>
+                       </ButtonsBarContainer>
                 </form>
-            </div>
+            </SignInForm>
         );
     }
 

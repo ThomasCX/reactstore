@@ -30,7 +30,7 @@ const StripeCheckoutButton = ({price}) => {
         name='React Store'
         billingAddress
         shippingAddress
-        image='https://sendeyo.com/up/d/f3eb2117da'
+        image='https://i.ibb.co/1vKwx2X/svg.png'
         description={`Your total is $${price}`}
         amount={priceForStripe}
         panelLabel='Pay Now'

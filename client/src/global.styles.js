@@ -2,7 +2,7 @@ import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    font-family: 'Open Sans Condensed';
+    font-family: 'Open Sans Condensed',serif;
     padding: 20px 60px;
     margin: 0;
 

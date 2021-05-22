@@ -15,7 +15,7 @@ const AboutPage = () => (
             With an exclusive taste and a wide selection of styles, you cannot go wrong with us.
             Men’s and Women's wear/accessories crafted for you in numerous colours and refined materials.
         </AboutContainer>
-        <HR></HR>
+        <HR/><HR/>
 
         <AboutTile>Who Are We</AboutTile>
         <span>

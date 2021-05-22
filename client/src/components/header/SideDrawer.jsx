@@ -10,7 +10,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import {signOutStart} from '../../redux/user/user.actions'
 
 import './SideDrawer.css'
-import {SideDrawerUl} from "./SideDrawer.styles";
+import CartIcon from "../cart-icon/cart-icon.component";
 
 const SideDrawer = ({show, signOutStart, currentUser})  => {
     let drawerClasses = "side-drawer";
@@ -20,7 +20,7 @@ const SideDrawer = ({show, signOutStart, currentUser})  => {
     }
     return (
         <nav className={drawerClasses}>
-            <SideDrawerUl>
+            <ul>
                 <li>
                     <Link to='/shop'>SHOP</Link>
                 </li>
@@ -49,7 +49,8 @@ const SideDrawer = ({show, signOutStart, currentUser})  => {
                         </li>
                     )
                 }
-            </SideDrawerUl>
+                <CartIcon to='/checkout'/>
+            </ul>
         </nav>
     );
 }

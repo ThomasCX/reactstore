@@ -21,7 +21,7 @@ const CollectionItem = ({item, addItem}) => {
     const { name, price, imageUrl} = item;
     const popover = (
         <Popover id="popover-basic">
-            <Popover.Title as="h6">Item Added to cart :)</Popover.Title>
+            <Popover.Title as="h6">Item Added To Cart :)</Popover.Title>
         </Popover>
     );
 
@@ -34,13 +34,15 @@ const CollectionItem = ({item, addItem}) => {
                 <NameContainer> {name}</NameContainer>
                 <PriceContainer> {price}</PriceContainer>
             </CollectionFooterContainer>
-            {/*When the addbutton is click it goes to the dispatch
+            {/*When the button is click it goes to the dispatch
             in order to run the add item function*/}
             <OverlayTrigger
+                animation
                 trigger="click"
                 placement="top"
                 rootClose
-                overlay={popover}>
+                overlay={popover} defaultShow={false}
+                delay={200}>
                 <AddButton  onClick={() => addItem(item)} inverted>
                     Add to Cart
                 </AddButton >

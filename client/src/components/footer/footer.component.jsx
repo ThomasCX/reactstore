@@ -58,15 +58,15 @@ const Footer = () => {
                         </div>
                         <div className="col-lg-3">
                             <ul className="list-unstyled nav-links social nav-right text-lg-right">
-                                <List><Icon to={{pathname: "https://github.com/natebrate"}}
+                                <List><Icon rel="preconnect" to={{pathname: "https://github.com/natebrate"}}
                                           target="_blank"><FaGithub/></Icon></List>
-                                <List><Icon to={{pathname: "https://github.com/natebrate"}}
+                                <List><Icon rel="preconnect" to={{pathname: "https://github.com/natebrate"}}
                                                 target="_blank"><FaInstagram/></Icon>
                                 </List>
-                                <List><Icon to={{pathname: "https://github.com/natebrate"}}
+                                <List><Icon rel="preconnect" to={{pathname: "https://github.com/natebrate"}}
                                                 target="_blank"><FaFacebook/></Icon>
                                 </List>
-                                <List><Icon to={{pathname: "https://github.com/Seaside-Development"}}
+                                <List><Icon rel="preconnect" to={{pathname: "https://github.com/Seaside-Development"}}
                                           target="_blank"><FaTwitter/></Icon></List>
                             </ul>
                         </div>

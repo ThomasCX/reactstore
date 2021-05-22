@@ -5,7 +5,7 @@ import FormInput from '../form/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
 import { signUpStart } from '../../redux/user/user.actions'
-import './sign-up.styles.scss';
+import {SignUpForm, Title} from "./sign-up.styles";
 
 const SignUp = ({signUpStart, }) => {
 
@@ -37,8 +37,8 @@ const SignUp = ({signUpStart, }) => {
             ...userCredentials, [name]: value });
     };
         return (
-            <div className='sign-up'>
-                <h2 className='title'>I do not have a account</h2>
+            <SignUpForm>
+                <Title>I do not have a account</Title>
                 <span>Sign up with your email and password</span>
                 <form className='sign-up-form' onSubmit={handleSubmit}>
                     <FormInput
@@ -60,6 +60,7 @@ const SignUp = ({signUpStart, }) => {
                     <FormInput
                         type='password'
                         name='password'
+                        autocomplete='new-password'
                         value={password}
                         onChange={handleChange}
                         label='Password'
@@ -68,6 +69,7 @@ const SignUp = ({signUpStart, }) => {
                     <FormInput
                         type='password'
                         name='confirmPassword'
+                        autocomplete='new-password'
                         value={confirmPassword}
                         onChange={handleChange}
                         label='Confirm Password'
@@ -75,7 +77,7 @@ const SignUp = ({signUpStart, }) => {
                     />
                     <CustomButton type='submit'>SIGN UP</CustomButton>
                 </form>
-            </div>
+            </SignUpForm>
         );
 }
 

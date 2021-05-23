@@ -4,9 +4,9 @@ import './HamburgerIcon.styles';
 import {ToggleButton, ToggleButtonLine} from "./HamburgerIcon.styles";
 
 
-const HamburgerIcon = props => {
+const HamburgerIcon = ({click}) => {
     return (
-        <ToggleButton onClick={props.click}>
+        <ToggleButton onClick={click}>
             <ToggleButtonLine/>
         </ToggleButton>
     );

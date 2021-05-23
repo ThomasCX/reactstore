@@ -36,16 +36,16 @@ app.get('/service-worker.js', (req, res) =>
     res.sendFile(path.resolve(__dirname, '..', 'build', 'service-worker.js'));
 });
 
-// app.get('OneSignalSDKUpdaterWorker.js', (req, res) =>
-//     {
-//         res.sendFile(path.resolve(__dirname, '..', 'build', "OneSignalSDKUpdaterWorker.js"));
-//     }
-// );
-// app.get('OneSignalSDKWorker.js', (req, res) =>
-//     {
-//         res.sendFile(path.resolve(__dirname, '..', 'build', "OneSignalSDKWorker.js"));
-//     }
-// );
+app.get('OneSignalSDKUpdaterWorker.js', (req, res) =>
+    {
+        res.sendFile(path.resolve(__dirname, '..', 'build', "OneSignalSDKUpdaterWorker.js"));
+    }
+);
+app.get('OneSignalSDKWorker.js', (req, res) =>
+    {
+        res.sendFile(path.resolve(__dirname, '..', 'build', "OneSignalSDKWorker.js"));
+    }
+);
 
 //payment backend for the stripe payment system
 app.post('/payment', (req, res) => {

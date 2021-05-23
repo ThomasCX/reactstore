@@ -10,7 +10,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import {signOutStart} from '../../redux/user/user.actions'
 
 import './SideDrawer.css'
-import CartIcon from "../cart-icon/cart-icon.component";
+import CartIcon from "../../../../../../REACT/MyReactNative/client/components/cart-icon/cart-icon.component";
 
 const SideDrawer = ({show, signOutStart, currentUser})  => {
     let drawerClasses = "side-drawer";

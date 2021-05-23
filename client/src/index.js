@@ -10,6 +10,9 @@ import * as serviceWorker from './serviceWorkerRegistration';
 
 import './index.css';
 import App from './App';
+import ReactGA from 'react-ga';
+ReactGA.initialize('G-60WYT46HBV'); // add your tracking id here.
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
     <Provider store={store}>

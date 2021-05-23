@@ -23,6 +23,7 @@
     "joi": "^17.4.0",
     "node-sass": "^6.0.0",
     "react-components": "^0.5.1",
+    "react-ga": "^3.3.0",
     "react-scripts": "^4.0.3",
     "stripe": "8.149.0"
   },

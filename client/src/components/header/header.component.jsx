@@ -6,7 +6,7 @@ import { createStructuredSelector } from 'reselect';
 import {ReactComponent as Logo} from '../../assets/crown.svg'
 
 // Cart related components
-import CartIcon from '../cart-icon/cart-icon.component';
+import CartIcon from '../../../../../../REACT/MyReactNative/client/components/cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';

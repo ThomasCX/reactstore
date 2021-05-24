@@ -15,13 +15,13 @@ ReactGA.initialize('G-60WYT46HBV'); // add your tracking id here.
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 ReactDOM.render(
-    <Provider store={store}>
-      <BrowserRouter>
-          <PersistGate persistor={persistor}>
-              <App />
-          </PersistGate>
-      </BrowserRouter>
-    </Provider>,
+         <Provider store={store}>
+          <BrowserRouter>
+              <PersistGate persistor={persistor}>
+                  <App />
+              </PersistGate>
+          </BrowserRouter>
+        </Provider>,
     document.getElementById('root')
 );
 

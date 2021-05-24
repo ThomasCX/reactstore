@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "concurrently": "^6.0.2",
+    "firebase-admin": "^9.8.0",
     "nodemon": "2.0.7"
   }
 }

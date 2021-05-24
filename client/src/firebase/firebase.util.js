@@ -6,7 +6,6 @@ import 'firebase/auth';
 const config = {
     apiKey: "AIzaSyA6w5l4Jkmdv9EJ-ykGMyuAkOuri3WJzbw",
     authDomain: "reactstore-836e1.firebaseapp.com",
-    // databaseUrl: "https://reacstore-836e1.firebaseio.com",
     projectId: "reactstore-836e1",
     storageBucket: "reactstore-836e1.appspot.com",
     messagingSenderId: "17091716918",
@@ -38,8 +37,20 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
             console.log('error creating user', error.message);
         }
     }
-
     return userRef;
+};
+
+export const getUserCartRef = async userId => {
+    const cartsRef = firestore.collection('carts').where('userId', '==', userId);
+    const snapShot = await cartsRef.get();
+
+    if (snapShot.empty) {
+        const cartDocRef = firestore.collection('carts').doc();
+        await cartDocRef.set({ userId, cartItems: [] });
+        return cartDocRef;
+    } else {
+        return snapShot.docs[0].ref;
+    }
 };
 
 //ADD NEW USER TO THE DATABASE DOCUMENT INSIDE COLLECTIONS DOCUMENT

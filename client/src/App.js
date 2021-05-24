@@ -49,8 +49,8 @@ const App = ({currentUser, checkUserSession }) => {
                         slidedown: {
                             enabled: true,
                             actionMessage: "We'd like to show you notifications for the latest news and updates about the following categories.",
-                            acceptButtonText: "OMG YEEEEESS!",
-                            cancelButtonText: "NAHHH",
+                            acceptButtonText: "YES",
+                            cancelButtonText: "NO",
                             categories: {
                                 tags: [
                                     {
